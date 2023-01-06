@@ -15,5 +15,11 @@ module.exports = {
         url: "http://monster-hunter.local/graphql",
       },
     },
+    {
+      resolve: "gatsby-plugin-manifest",
+      options: {
+        icon: "src/images/favicon.png",
+      },
+    }
   ],
 };
