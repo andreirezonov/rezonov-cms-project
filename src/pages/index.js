@@ -5,14 +5,21 @@ import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import Layout from "../components/layout"
 import Game from "../components/game"
 
+import {
+    header,
+    headerImage,
+} from "../page.module.css"
+
 const IndexPage = ({ data: { wpPage: { homePage }}}) => {
     const image = getImage(homePage.picture.localFile)
     return (
         <Layout pageTitle="Home">
-            <section>
-                <GatsbyImage image={image}/>
-
-                <h1>{homePage.title}</h1>
+            <section className={header}>
+                <div className={headerImage}>
+                    <GatsbyImage image={image}/>
+                </div>
+                
+                <h1>The Monster Hunter Franchise</h1>
                 <p dangerouslySetInnerHTML={{ __html: homePage.description }}/>
 
                 <h2>Featured Games</h2>
@@ -70,7 +77,7 @@ query {
             picture {
                 localFile {
                     childImageSharp {
-                        gatsbyImageData(height: 300)
+                        gatsbyImageData(height: 200)
                     }
                 }
             }

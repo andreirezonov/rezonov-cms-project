@@ -3,3 +3,21 @@
 	color: white;
 	font-family: Barlow;
 }
+
+::-webkit-scrollbar {
+	color: #212121;
+}
+::-webkit-scrollbar-track {
+	color: #212121;
+}
+::-webkit-scrollbar-thumb {
+	background: #fdc76c;
+}
+
+.header {
+	margin: 100px;
+	margin-top: -50px;
+}
+.headerImage {
+	text-align: right;;
+}

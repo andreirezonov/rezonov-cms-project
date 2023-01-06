@@ -1,20 +1,22 @@
 body {
 	background-color: #2d2d2d;
-	margin: 25px;
 }
 
 .navbar {
 	display: inline-block;
-}
-
-.navbar ul {
 	list-style-type: none;
-	margin: 0;
-	padding: 0;
+	margin-top: 50px;
+	margin-left: 100px;
 }
-
-.navbar ul > li {
+.navbarList {
 	display: inline;
 	margin: 25px;
 	margin-left: 0px;
+}
+.navbarLink, .navbarLink:link, .navbarLink:visited {
+	text-decoration: none;
+	color: #fdc76c;
+	
+	font-size: 30px;
+	font-weight: bold;
 }
