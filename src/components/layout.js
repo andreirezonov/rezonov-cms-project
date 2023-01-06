@@ -1,10 +1,11 @@
 import * as React from "react"
 import { Link, useStaticQuery, graphql } from "gatsby"
+
 import "./layout.css"
 
 const Layout = ({ children }) => {
   	const data = useStaticQuery(graphql`
-		query SiteTitleQuery {
+		query {
 			site {
 				siteMetadata {
 				title

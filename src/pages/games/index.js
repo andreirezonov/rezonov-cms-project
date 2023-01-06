@@ -1,19 +1,28 @@
 import * as React from 'react'
 import { Link, graphql } from 'gatsby'
+import { GatsbyImage, getImage } from 'gatsby-plugin-image'
+
 import Layout from "../../components/layout"
 
 const GamesPage = ({ data: { allWpGame: { edges }}}) => {
+
     return (
         <Layout pageTitle="All Games">
+            
             <section>
                 <h1>Games</h1>
 
                 {edges.map (title => {
                     const game = title.node.monsterHunter
                     const slug = title.node.slug
+                    const image = getImage(title.node.monsterHunter.cover.localFile)
 
                     return (
                         <Link key={title.node.id} to={`/games/${slug}`}>
+                            <GatsbyImage
+                                image={image}
+                                alt={title.node.monsterHunter.cover.altText}
+                            />
                             <p>{game.title}</p>
                         </Link>
                     )
@@ -24,7 +33,7 @@ const GamesPage = ({ data: { allWpGame: { edges }}}) => {
 }
 
 export const query = graphql`
-query NewQuery {
+query {
     allWpGame {
         edges {
             node {
@@ -35,9 +44,10 @@ query NewQuery {
                     cover {
                         localFile {
                             childImageSharp {
-                                gatsbyImageData
+                                gatsbyImageData(height: 200)
                             }
                         }
+                        altText
                     }
                 }
                 slug
@@ -45,7 +55,6 @@ query NewQuery {
             }
         }
     }
-}
-`
+}`
 
 export default GamesPage
