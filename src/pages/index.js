@@ -53,7 +53,6 @@ query {
                 ... on WpGame {
                     slug
                     monsterHunter {
-                        title
                         cover {
                             localFile {
                                 childImageSharp {
@@ -61,6 +60,8 @@ query {
                                 }
                             } 
                         }
+                        title
+                        initialReleaseDate
                     }
                 }
             }

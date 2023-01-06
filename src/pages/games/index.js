@@ -23,7 +23,9 @@ const GamesPage = ({ data: { allWpGame: { edges }}}) => {
                                 image={image}
                                 alt={title.node.monsterHunter.cover.altText}
                             />
-                            <p>{game.title}</p>
+                            <h3>{game.title}</h3>
+                            <p>{game.initialReleaseDate}</p>
+                            
                         </Link>
                     )
                 })}
@@ -39,8 +41,7 @@ query {
             node {
                 monsterHunter {
                     title
-                    description
-                    publishers
+                    initialReleaseDate
                     cover {
                         localFile {
                             childImageSharp {

@@ -12,9 +12,8 @@ const Game = ({ game, slug }) => {
             />
             <article>
                 {game.monsterHunter.artistName && <p>{game.monsterHunter.title}</p>}
-                <p>
-                    {game.monsterHunter.title}
-                </p>
+                <h3>{game.monsterHunter.title}</h3>
+                <p>{game.monsterHunter.initialReleaseDate}</p>
             </article>
         </Link>
     )
