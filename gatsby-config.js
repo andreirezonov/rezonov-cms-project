@@ -20,6 +20,17 @@ module.exports = {
       options: {
         icon: "src/images/favicon.png",
       },
+    },
+    {
+      resolve: `gatsby-plugin-google-fonts-v2`,
+      options: {
+        fonts: [
+          {
+            family: 'Barlow',
+            weights: ['100', '400', '700']
+          },
+        ]
+      }
     }
   ],
 };

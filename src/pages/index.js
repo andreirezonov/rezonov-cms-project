@@ -13,7 +13,7 @@ const IndexPage = ({ data: { wpPage: { homePage }}}) => {
                 <GatsbyImage image={image}/>
 
                 <h1>{homePage.title}</h1>
-                <p>{homePage.description}</p>
+                <p dangerouslySetInnerHTML={{ __html: homePage.description }}/>
 
                 <h2>Featured Games</h2>
                 {homePage.featuredGames.map(game => {

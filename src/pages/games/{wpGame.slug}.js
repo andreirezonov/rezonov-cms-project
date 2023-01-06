@@ -12,11 +12,11 @@ const GamePage = ({ data: { wpGame: { monsterHunter : game, platforms: { nodes :
                 <GatsbyImage image={image}/>
 
                 <h1>{game.title}</h1>
-                <p>{game.description}</p>
+                <p dangerouslySetInnerHTML={{ __html: game.description }}/>
 
                 <p>Platform(s):
                 <div>
-                    {platforms.map((platform, i) => (
+                image.png                    {platforms.map((platform, i) => (
                     <span key={i}>
                         {platform.name} {i + 1 < platforms.length && "- "}
                     </span>

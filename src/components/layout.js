@@ -19,7 +19,6 @@ const Layout = ({ children }) => {
 )
 
 return (
-    <>
       	<div>
       		<title>{data.site.siteMetadata.title}</title>
       		<nav className={navbar}>
@@ -38,7 +37,6 @@ return (
 			</nav>
       		<main>{children}</main>
     	</div>
-    </>
 )}
 
 export default Layout
