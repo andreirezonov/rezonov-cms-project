@@ -1,7 +1,11 @@
 import React from "react"
 import { Link } from "gatsby"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
+/*
+import {
 
+} from "../game.module.css"
+*/
 const Game = ({ game, slug }) => {
     const cover = getImage(game.monsterHunter.cover.localFile)
     return (
