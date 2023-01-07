@@ -7,7 +7,7 @@ import {
 	navbarLink,
 } from "./layout.module.css"
 
-import "../page.module.css"
+
 
 const Layout = ({ children }) => {
   	const data = useStaticQuery(graphql`
@@ -25,10 +25,10 @@ return (
 		<title>{data.site.siteMetadata.title}</title>
 		<nav className={navbar}>
 				<li className={navbarList}>
-					<Link className ={navbarLink} to="/">Home</Link>
+					<Link className ={navbarLink} to="/">HOME</Link>
 				</li>
 				<li className={navbarList}>
-					<Link className ={navbarLink} to="/games">Games</Link>
+					<Link className ={navbarLink} to="/games">GAMES</Link>
 				</li>
 		</nav>
 		<main>{children}</main>

@@ -1,22 +1,40 @@
+/* -- GENERAL -- */
+
 body {
-	background-color: #2d2d2d;
+	background-color: #212121;
+	margin: 0px;
+}
+::selection {
+	color: #212121;
+  	background: #fdc86cb6;
 }
 
+/* -- NAVBAR -- */
+
 .navbar {
-	display: inline-block;
-	list-style-type: none;
-	margin-top: 50px;
-	margin-left: 100px;
+	user-select: none;
+
+	box-sizing: border-box;
+	width: 100%;
+
+	background-color: rgb(20, 20, 20);
+
+	padding: 20px;
+	padding-left: 100px;
 }
 .navbarList {
 	display: inline;
-	margin: 25px;
+	margin: 40px;
 	margin-left: 0px;
 }
 .navbarLink, .navbarLink:link, .navbarLink:visited {
+	color: #fdc86cb6;
 	text-decoration: none;
-	color: #fdc76c;
 	
 	font-size: 30px;
 	font-weight: bold;
+}
+.navbarLink:hover {
+	color: #fdc76c;
+	transition: color 0.5s ease;
 }

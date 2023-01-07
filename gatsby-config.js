@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: "Monster Hunter",
+    title: "Monster Hunter Franchise",
     description: "Monster Hunter is an action role-playing game franchise developed and published by Capcom.",
     author: "@gatsbyjs",
     siteUrl: "https://gatsbystarterdefaultsource.gatsbyjs.io/",

@@ -7,7 +7,7 @@ import Layout from "../../components/layout"
 const GamesPage = ({ data: { allWpGame: { edges }}}) => {
 
     return (
-        <Layout pageTitle="All Games">
+        <Layout>
             
             <section>
                 <h1>Games</h1>

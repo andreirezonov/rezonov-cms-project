@@ -6,28 +6,35 @@ import Layout from "../components/layout"
 import Game from "../components/game"
 
 import {
-    header,
+    headerSection,
     headerImage,
+    featuredSection,
+    featuredTitle,
 } from "../page.module.css"
 
 const IndexPage = ({ data: { wpPage: { homePage }}}) => {
     const image = getImage(homePage.picture.localFile)
     return (
-        <Layout pageTitle="Home">
-            <section className={header}>
+        <Layout>
+            <section className={headerSection}>
                 <div className={headerImage}>
                     <GatsbyImage image={image}/>
                 </div>
                 
                 <h1>The Monster Hunter Franchise</h1>
                 <p dangerouslySetInnerHTML={{ __html: homePage.description }}/>
-
-                <h2>Featured Games</h2>
-                {homePage.featuredGames.map(game => {
+            </section>
+            <section className={featuredSection}>
+                <h1>Featured Games</h1>
+                <div className={featuredTitle}>
+                    {homePage.featuredGames.map(game => {
                     return <Game slug={`games/${game.slug}`} key={game.id} game={game} />
-                })}
+                    })}
+                </div>
+                
             </section>
             <section>
+                <h1>Give us feedback!</h1>
                 <form name="contact" method="POST" data-netlify="true">
                     <label>First Name:</label>
                     <input type="text" name="first-name" required={true} />
@@ -63,7 +70,7 @@ query {
                         cover {
                             localFile {
                                 childImageSharp {
-                                gatsbyImageData(height: 300)
+                                gatsbyImageData(height: 500)
                                 }
                             } 
                         }
@@ -77,7 +84,7 @@ query {
             picture {
                 localFile {
                     childImageSharp {
-                        gatsbyImageData(height: 200)
+                        gatsbyImageData
                     }
                 }
             }

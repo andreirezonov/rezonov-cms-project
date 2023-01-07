@@ -7,7 +7,7 @@ import Layout from "../../components/layout"
 const GamePage = ({ data: { wpGame: { monsterHunter : game, platforms: { nodes : platforms }}}}) => {
     const image = getImage(game.cover.localFile)
     return (
-        <Layout pageTitle="Home">
+        <Layout>
             <section>
                 <GatsbyImage image={image}/>
 
@@ -16,7 +16,7 @@ const GamePage = ({ data: { wpGame: { monsterHunter : game, platforms: { nodes :
 
                 <p>Platform(s):
                 <div>
-                image.png                    {platforms.map((platform, i) => (
+                { platforms.map (( platform, i ) => (
                     <span key={i}>
                         {platform.name} {i + 1 < platforms.length && "- "}
                     </span>
