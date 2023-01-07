@@ -8,11 +8,18 @@
 	color: white;
 	font-family: Barlow;
 }
+::placeholder {
+	opacity: 0.69;
+
+	font-family: Barlow;
+	font-weight: thin;
+}
 ::-webkit-scrollbar {
 	background: #2b2b2b;
+	width: 5px;
 }
 ::-webkit-scrollbar-thumb {
-	background: #fdc86cb6;
+	background: #fdc76c;
 }
 
 /* -- HEADER -- */
@@ -28,7 +35,6 @@
 
 	margin: 0px 100px 20px 100px;
 
-	z-index: 1;
 	backdrop-filter: blur(10px);
 	font-size: 60px;
 	width: 0px;
@@ -47,13 +53,15 @@
 
 	display: grid;
 
-	margin-bottom: -850px;
+	margin-bottom: -660px;
 }
 
 /* -- FEATURED -- */
 
 .featuredSection {
 	margin: 300px 100px 0px 100px;
+
+	margin-top: 100px;
 }
 .featuredSection > h1 {
 	user-select: none;
@@ -71,6 +79,8 @@
 /* -- FORM -- */
 
 .formSection {
+	scrollbar-width: none;
+
 	margin: 0px 100px 0px 100px;
 }
 .formSection > h1 {
@@ -81,4 +91,73 @@
 	backdrop-filter: blur(10px);
 	font-size: 60px;
 	width: 0px;
+}
+.formContainer {
+	background-image: url("./images/palico.png");
+	background-position: bottom 0px right 20px;
+	background-repeat: no-repeat;
+	background-size: 450px;
+
+	margin: 0px 10px 0px 10px;
+	padding: 20px;
+
+	outline-style: solid;
+	outline-width: 3px;
+	outline-color: #fdc76c;
+	outline-offset: 5px;
+	display: grid;
+
+	margin-bottom: 50px;
+}
+.formContainer > label {
+	user-select: none;
+
+	color: #fdc76c;
+
+	font-weight: bold;
+}
+.formContainer > input, .formContainer > textarea {
+	resize: none;
+
+	border-style: solid;
+	border-color: #fdc76c;
+
+	width: 70%;
+
+	font-weight: thin;
+}
+.formContainer > input:focus, .formContainer > textarea:focus {
+	outline: none;
+}
+.formContainer > button {
+	user-select: none;
+
+	cursor: pointer;
+
+	margin-top: 20px;
+	padding: 5px 10px 5px 10px;
+
+	width: fit-content;
+
+	font-size: 20px;
+	font-weight: bold;
+
+	background-color: transparent;
+
+	border-style: solid;
+	border-color: #fdc76c;
+	border-width: 2px;
+
+	color: #fdc76c;
+
+	opacity: 0.69;
+
+	transition: opacity .5s ease-in-out;
+	-webkit-transition: opacity .5s ease-in-out;
+}
+.formContainer > button:hover {
+	opacity: 1.0;
+
+	transition: opacity .5s ease-in-out;
+	-webkit-transition: opacity .5s ease-in-out;
 }

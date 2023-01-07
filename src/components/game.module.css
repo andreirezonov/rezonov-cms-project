@@ -3,12 +3,22 @@
 .gameLink, .gameLink:link, .gameLink:visited {
     text-decoration: none;
 }
+
 .gameSection {
     user-select: none;
 }
+
 .gameImage {
-    margin-bottom: -10px;
+    outline-style: solid;
+	outline-width: 0px;
+	outline-color: #fdc76c;
 }
+.gameImage:hover {
+	outline-width: 10px;
+
+    transition: outline-width 0.1s ease-in-out;
+}
+
 .gameSpecs {
     color: #212121;
 
@@ -16,12 +26,17 @@
     backdrop-filter: blur();
 
     text-align: center;
-    padding: 5px 0px 10px 0px;
-    margin: 0px -20px 0px -20px;
+    margin: -30px -20px 0px -20px;
+
+    line-height: 5px;
 }
 .gameSpecs > h1 {
 	font-size: 30px;
+
+    padding-top: 25px;
 }
 .gameSpecs > p {
     font-size: 20px;
+
+    padding-bottom: 25px;
 }

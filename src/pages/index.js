@@ -11,6 +11,7 @@ import {
     featuredSection,
     featuredTitle,
     formSection,
+    formContainer,
 } from "../page.module.css"
 
 const IndexPage = ({ data: { wpPage: { homePage }}}) => {
@@ -35,24 +36,24 @@ const IndexPage = ({ data: { wpPage: { homePage }}}) => {
             </section>
             <section className={formSection}>
                 <h1>Give Us Feedback!</h1>
-                <form name="contact" method="POST" data-netlify="true">
-                    <label>First Name:</label>
-                    <input type="text" name="first-name" required={true} />
+                <form className={formContainer} name="contact" method="POST" data-netlify="true">
+                    <label>First Name</label>
+                    <input type="text" name="first-name" required={true} placeholder="e.g: John"/>
 
-                    <label>Last Name:</label>
-                    <input type="text" name="last-name" required={true} />   
+                    <label>Last Name</label>
+                    <input type="text" name="last-name" required={true} placeholder="e.g: Hunter"/>   
 
-                    <label>Email:</label>
-                    <input type="email" name="email" required={true} />
+                    <label>Email</label>
+                    <input type="email" name="email" required={true} placeholder="e.g: john.hunter@gmail.com"/>
 
-                    <label>Subject:</label>
-                    <input type="text" name="subject" required={true} />
+                    <label>Subject</label>
+                    <input type="text" name="subject" required={true} placeholder="e.g: S.O.S"/>
 
-                    <label>Message:</label>
-                    <textarea name="message" required={true}></textarea>
+                    <label>Message</label>
+                    <textarea rows="7" name="message" required={true} placeholder="e.g: You could add X and Y perhaps?"></textarea>
 
                     <input type="hidden" name="form-name" value="contact" />
-                    <button type="submit">Send</button>
+                    <button type="submit">Send In</button>
                 </form>
             </section>
         </Layout>
