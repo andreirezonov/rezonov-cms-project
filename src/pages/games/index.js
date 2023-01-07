@@ -4,29 +4,36 @@ import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 
 import Layout from "../../components/layout"
 
+import {
+    gamesSection,
+    gamesContainer,
+    gamesLink,
+    gamesCover,
+    gamesSpecs,
+} from "../../page.module.css"
+
 const GamesPage = ({ data: { allWpGame: { edges }}}) => {
 
     return (
         <Layout>
             
-            <section>
-                <h1>Games</h1>
-
+            <section className={gamesSection}>
                 {edges.map (title => {
                     const game = title.node.monsterHunter
                     const slug = title.node.slug
                     const image = getImage(title.node.monsterHunter.cover.localFile)
 
                     return (
-                        <Link key={title.node.id} to={`/games/${slug}`}>
-                            <GatsbyImage
-                                image={image}
-                                alt={title.node.monsterHunter.cover.altText}
-                            />
-                            <h3>{game.title}</h3>
-                            <p>{game.initialReleaseDate}</p>
-                            
-                        </Link>
+                        <div className={gamesContainer}>
+                            <Link className={gamesLink} key={title.node.id} to={`/games/${slug}`}>
+                                <GatsbyImage className={gamesCover} image={image} alt={title.node.monsterHunter.cover.altText}/>
+                                <div className={gamesSpecs}>
+                                    <h1>{game.title}</h1>
+                                    <p>{game.initialReleaseDate}</p>
+                                    <h2>{game.generation} Generation</h2>
+                                </div>
+                            </Link>
+                        </div>
                     )
                 })}
             </section>
@@ -35,17 +42,18 @@ const GamesPage = ({ data: { allWpGame: { edges }}}) => {
 }
 
 export const query = graphql`
-query {
-    allWpGame {
+{
+    allWpGame(sort: {fields: monsterHunter___generationNumber, order: DESC}) {
         edges {
             node {
                 monsterHunter {
                     title
                     initialReleaseDate
+                    generation
                     cover {
                         localFile {
                             childImageSharp {
-                                gatsbyImageData(height: 200)
+                                gatsbyImageData(height: 300)
                             }
                         }
                         altText

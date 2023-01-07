@@ -161,3 +161,73 @@
 	transition: opacity .5s ease-in-out;
 	-webkit-transition: opacity .5s ease-in-out;
 }
+
+/* -- GAMES -- */
+
+.gamesSection {
+	user-select: none;
+
+	text-align: center;
+	
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+
+	column-gap: 25px;
+	row-gap: 25px;
+
+	margin: 40px 40px 40px 40px;
+}
+.gamesContainer {
+	padding: 40px;
+
+	height: 360px;
+	width: 360px;
+
+	background-color: #1a1a1a;
+}
+.gamesLink, .gamesLink:link, .gamesLink:visited {
+	text-decoration: none;
+}
+.gamesCover {
+	margin-bottom: -13px;
+}
+.gamesCover {
+    outline-style: solid;
+	outline-width: 0px;
+	outline-color: #fdc76c;
+}
+.gamesCover:hover {
+	outline-width: 5px;
+
+    transition: outline-width 0.1s ease-in-out;
+}
+.gamesSpecs {
+	color: #212121;
+
+    line-height: 15px;
+
+	background-color: #fdc76c;
+}
+.gamesSpecs > h1 {
+	font-size: 16px;
+
+	margin-bottom: -8px;
+    padding-top: 5px;
+}
+.gamesSpecs > p {
+	font-size: 12px;
+
+    padding-bottom: 25px;
+}
+.gamesSpecs > h2 {
+	color: #fdc76c;
+	
+	font-size: 12px;
+	font-weight: bold;
+	
+	margin-top: -35px;
+	padding: 5px;
+
+	background-color: #2b2b2b;
+}

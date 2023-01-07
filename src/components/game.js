@@ -5,7 +5,7 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import {
     gameLink,
     gameSection,
-    gameImage,
+    gameCover,
     gameSpecs,
 } from "./game.module.css"
 
@@ -14,7 +14,7 @@ const Game = ({ game, slug }) => {
     return (
         <Link className={gameLink} to={slug}>
             <section className={gameSection}>
-                <div className={gameImage}>
+                <div className={gameCover}>
                     <GatsbyImage image={cover} alt={game.monsterHunter.cover.altText}/>
                 </div>
                 <div className={gameSpecs}>

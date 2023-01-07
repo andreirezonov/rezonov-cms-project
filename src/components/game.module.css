@@ -8,12 +8,12 @@
     user-select: none;
 }
 
-.gameImage {
+.gameCover {
     outline-style: solid;
 	outline-width: 0px;
 	outline-color: #fdc76c;
 }
-.gameImage:hover {
+.gameCover:hover {
 	outline-width: 10px;
 
     transition: outline-width 0.1s ease-in-out;
@@ -33,7 +33,7 @@
 .gameSpecs > h1 {
 	font-size: 30px;
 
-    padding-top: 25px;
+    padding-top: 25px; 
 }
 .gameSpecs > p {
     font-size: 20px;

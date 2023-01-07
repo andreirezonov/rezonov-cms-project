@@ -12,6 +12,8 @@ body {
 /* -- NAVBAR -- */
 
 .navbar {
+	background-color: #1a1a1a;
+	
 	user-select: none;
 
 	box-sizing: border-box;
@@ -38,7 +40,6 @@ body {
 	font-size: 30px;
 	font-weight: bold;
 
-	background-color: #212121;
 	padding: 20px 10px 20px 10px;
 
 	opacity: 0.69;
