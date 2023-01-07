@@ -47,13 +47,13 @@ const IndexPage = ({ data: { wpPage: { homePage }}}) => {
                     <input type="email" name="email" required={true} placeholder="e.g: john.hunter@gmail.com"/>
 
                     <label>Subject</label>
-                    <input type="text" name="subject" required={true} placeholder="e.g: S.O.S"/>
+                    <input type="text" name="subject" required={true} placeholder="e.g: I got an idea."/>
 
                     <label>Message</label>
                     <textarea rows="7" name="message" required={true} placeholder="e.g: You could add X and Y perhaps?"></textarea>
 
                     <input type="hidden" name="form-name" value="contact" />
-                    <button type="submit">Send In</button>
+                    <button type="submit">Submit</button>
                 </form>
             </section>
         </Layout>

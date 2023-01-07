@@ -24,10 +24,6 @@
 
 /* -- HEADER -- */
 
-.headerSection {
-	margin-top: 0px;
-	
-}
 .headerSection > h1 {
 	user-select: none;
 
@@ -81,7 +77,7 @@
 .formSection {
 	scrollbar-width: none;
 
-	margin: 0px 100px 0px 100px;
+	margin: 0px 100px 100px 100px;
 }
 .formSection > h1 {
 	user-select: none;
@@ -96,35 +92,44 @@
 	background-image: url("./images/palico.png");
 	background-position: bottom 0px right 20px;
 	background-repeat: no-repeat;
-	background-size: 450px;
+	background-size: 525px;
 
 	margin: 0px 10px 0px 10px;
 	padding: 20px;
 
 	outline-style: solid;
-	outline-width: 3px;
+	outline-width: 5px;
 	outline-color: #fdc76c;
 	outline-offset: 5px;
 	display: grid;
 
 	margin-bottom: 50px;
+
+	border-radius: 10px;
+
+	background-color: white;
 }
 .formContainer > label {
 	user-select: none;
 
-	color: #fdc76c;
+	color: #212121;
 
 	font-weight: bold;
+
+	margin: 5px 0px 5px 0px;
 }
 .formContainer > input, .formContainer > textarea {
 	resize: none;
 
 	border-style: solid;
-	border-color: #fdc76c;
+	border-color: #212121;
+	border-width: 1px;
 
-	width: 70%;
+	width: 65%;
 
 	font-weight: thin;
+
+	padding: 5px;
 }
 .formContainer > input:focus, .formContainer > textarea:focus {
 	outline: none;
@@ -144,25 +149,24 @@
 
 	background-color: transparent;
 
-	border-style: solid;
-	border-color: #fdc76c;
-	border-width: 2px;
+	border-width: 0px;
 
 	color: #fdc76c;
+	background-color: #212121;
 
-	opacity: 0.69;
+	opacity: 0.76;
 
-	transition: opacity .5s ease-in-out;
-	-webkit-transition: opacity .5s ease-in-out;
+	transition: opacity .2s ease-in-out;
+	-webkit-transition: opacity .2s ease-in-out;
 }
 .formContainer > button:hover {
 	opacity: 1.0;
 
-	transition: opacity .5s ease-in-out;
-	-webkit-transition: opacity .5s ease-in-out;
+	transition: opacity .2s ease-in-out;
+	-webkit-transition: opacity .2s ease-in-out;
 }
 
-/* -- GAMES -- */
+/* -- GAMES PAGE -- */
 
 .gamesSection {
 	user-select: none;
@@ -176,13 +180,13 @@
 	column-gap: 25px;
 	row-gap: 25px;
 
-	margin: 40px 40px 40px 40px;
+	margin: 50px 50px 100px 50px;
 }
 .gamesContainer {
 	padding: 40px;
 
-	height: 360px;
-	width: 360px;
+	height: 355px;
+	width: 355px;
 
 	background-color: #1a1a1a;
 }
@@ -190,15 +194,17 @@
 	text-decoration: none;
 }
 .gamesCover {
-	margin-bottom: -13px;
-}
-.gamesCover {
-    outline-style: solid;
+	margin-bottom: -14px;
+	outline-style: solid;
 	outline-width: 0px;
+	outline-offset: 5px;
 	outline-color: #fdc76c;
+
+	max-height: 300px;
+	max-width: 355px;
 }
 .gamesCover:hover {
-	outline-width: 5px;
+	outline-width: 3px;
 
     transition: outline-width 0.1s ease-in-out;
 }
@@ -210,13 +216,13 @@
 	background-color: #fdc76c;
 }
 .gamesSpecs > h1 {
-	font-size: 16px;
+	font-size: 17px;
 
 	margin-bottom: -8px;
     padding-top: 5px;
 }
 .gamesSpecs > p {
-	font-size: 12px;
+	font-size: 14px;
 
     padding-bottom: 25px;
 }
@@ -230,4 +236,41 @@
 	padding: 5px;
 
 	background-color: #2b2b2b;
+}
+
+/* -- GAME PAGE -- */
+.gamePageSection {
+	margin: 50px 100px 100px 100px;
+}
+.gamePageSection > h1 {
+	color: #fdc76c;
+
+	font-size: 60px;
+	font-weight: bold;
+
+	margin: 10px 0px 0px -2px;
+}
+.gamePageCover {
+	user-select: none;
+	border: #fdc76c;
+	border-width: 5px;
+	border-spacing: 20px;
+}
+.gamePageBackground {
+	position: absolute;
+	height: fit-content;
+	width: 100%;
+	opacity: 0.5;
+	filter: blur(20px);
+}
+.gamePageSpecs > p {
+	color: #fdc76c;
+	font-size: 20px;
+	font-weight: bold;
+}
+.gamePageSpecs > p > li {
+	list-style: none;
+	color: white;
+	font-size: 15px;
+	font-weight: normal;
 }

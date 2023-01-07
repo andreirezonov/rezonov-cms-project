@@ -4,39 +4,67 @@ import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 
 import Layout from "../../components/layout"
 
+import {
+    gamePageBackground,
+    gamePageSection,
+    gamePageCover,
+    gamePageSpecs,
+} from "../../page.module.css"
+
 const GamePage = ({ data: { wpGame: { monsterHunter : game, platforms: { nodes : platforms }}}}) => {
     const image = getImage(game.cover.localFile)
     return (
         <Layout>
-            <section>
-                <GatsbyImage image={image}/>
+            <GatsbyImage class={gamePageBackground} image={image}/>
+            <section class={gamePageSection}>
+                <GatsbyImage class={gamePageCover} image={image}/>
 
                 <h1>{game.title}</h1>
                 <p dangerouslySetInnerHTML={{ __html: game.description }}/>
 
-                <p>Platform(s):
-                <div>
-                { platforms.map (( platform, i ) => (
-                    <span key={i}>
-                        {platform.name} {i + 1 < platforms.length && "- "}
-                    </span>
-                    ))}
+                <div className={gamePageSpecs}>
+                    <p>Platform(s)
+                        <li>
+                        { platforms.map (( platform, i ) => (
+                            <span key={i}>
+                                {platform.name} {i + 1 < platforms.length && "- "}
+                            </span>
+                            ))}
+                        </li>
+                    </p>
+                    <p>Publisher(s)
+                        <li>{game.publishers}</li>
+                    </p>
+                    <p>Developer(s)
+                        <li>{game.developers}</li> 
+                    </p>
+                    <p>Initial Release Date
+                        <li>{game.initialReleaseDate}</li>
+                    </p>
+                    <p>Director(s)
+                        <li>{game.directors}</li>
+                    </p>
+                    <p>Composer(s)
+                        <li>{game.composers}</li>
+                    </p>
+                    <p>Genre(s)
+                        <li>{game.genres}</li>
+                    </p>
+                    <p>Flagship Monster
+                        <li>{game.flagshipMonster}</li>
+                    </p>
+                    <p>Monster Count
+                        <li>Large Monsters: {game.largeMonsters}</li>
+                        <li>Small Monsters: {game.smallMonsters}</li>
+                    </p>
+                    <p>Locations
+                        <li>Hunting Locations: {game.huntingLocations}</li>
+                        <li>Town Locations: {game.townLocations}</li>
+                    </p>
+                    <p>Generation
+                        <li>{game.generation}</li>
+                    </p>
                 </div>
-                </p>
-            </section>
-            <section>
-                <p><span>Publisher(s):</span> {game.publishers}</p>
-                <p><span>Developer(s):</span> {game.developers}</p>
-                <p><span>Initial Release Date:</span> {game.initialReleaseDate}</p>
-                <p><span>Director(s):</span> {game.directors}</p>
-                <p><span>Composer(s):</span> {game.composers}</p>
-                <p><span>Genre(s):</span> {game.genres}</p>
-                <p><span>Flagship Monster:</span> {game.flagshipMonster}</p>
-                <p><span>Large Monsters:</span> {game.largeMonsters}</p>
-                <p><span>Small Monsters:</span> {game.smallMonsters}</p>
-                <p><span>Hunting Locations:</span> {game.huntingLocations}</p>
-                <p><span>Town Locations:</span> {game.townLocations}</p>
-                <p><span>Generation:</span> {game.generation}</p>
             </section>
         </Layout>
     )
@@ -63,7 +91,7 @@ query ($slug: String) {
             cover {
                 localFile {
                     childImageSharp {
-                        gatsbyImageData(height: 350)
+                        gatsbyImageData(height: 400)
                     }
                 }
             }
