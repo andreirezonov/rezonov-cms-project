@@ -1,7 +1,9 @@
 /* -- GENERAL -- */
 
 :root {
-	background-color: red;
+	background-color: #212121;
+
+	text-decoration: none;
 
 	color: white;
 	font-family: Barlow;
@@ -10,7 +12,7 @@
 	background: #2b2b2b;
 }
 ::-webkit-scrollbar-thumb {
-	background: #3a3a3a;
+	background: #fdc86cb6;
 }
 
 /* -- HEADER -- */
@@ -58,11 +60,25 @@
 
 	color: #fdc76c;
 
-	backdrop-filter: blur(10px);
 	font-size: 60px;
 	width: 0px;
 }
-.featuredTitle{
+.featuredTitle {
 	display: flex;
 	justify-content: space-between;
+}
+
+/* -- FORM -- */
+
+.formSection {
+	margin: 0px 100px 0px 100px;
+}
+.formSection > h1 {
+	user-select: none;
+
+	color: #fdc76c;
+
+	backdrop-filter: blur(10px);
+	font-size: 60px;
+	width: 0px;
 }

@@ -10,6 +10,7 @@ import {
     headerImage,
     featuredSection,
     featuredTitle,
+    formSection,
 } from "../page.module.css"
 
 const IndexPage = ({ data: { wpPage: { homePage }}}) => {
@@ -31,10 +32,9 @@ const IndexPage = ({ data: { wpPage: { homePage }}}) => {
                     return <Game slug={`games/${game.slug}`} key={game.id} game={game} />
                     })}
                 </div>
-                
             </section>
-            <section>
-                <h1>Give us feedback!</h1>
+            <section className={formSection}>
+                <h1>Give Us Feedback!</h1>
                 <form name="contact" method="POST" data-netlify="true">
                     <label>First Name:</label>
                     <input type="text" name="first-name" required={true} />

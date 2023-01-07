@@ -1,3 +1,27 @@
+/* -- GAME -- */
+
+.gameLink, .gameLink:link, .gameLink:visited {
+    text-decoration: none;
+}
 .gameSection {
-    
+    user-select: none;
+}
+.gameImage {
+    margin-bottom: -10px;
+}
+.gameSpecs {
+    color: #212121;
+
+    background-color: #fdc76c;
+    backdrop-filter: blur();
+
+    text-align: center;
+    padding: 5px 0px 10px 0px;
+    margin: 0px -20px 0px -20px;
+}
+.gameSpecs > h1 {
+	font-size: 30px;
+}
+.gameSpecs > p {
+    font-size: 20px;
 }

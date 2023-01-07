@@ -3,21 +3,23 @@ import { Link } from "gatsby"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 import {
+    gameLink,
     gameSection,
+    gameImage,
+    gameSpecs,
 } from "./game.module.css"
 
 const Game = ({ game, slug }) => {
     const cover = getImage(game.monsterHunter.cover.localFile)
     return (
-        <Link to={slug}>
+        <Link className={gameLink} to={slug}>
             <section className={gameSection}>
-                <GatsbyImage
-                    image={cover}
-                    alt={game.monsterHunter.cover.altText}
-                />
-                <div>
-                    <h3>{game.monsterHunter.title}</h3>
-                    <p>Released: {game.monsterHunter.initialReleaseDate}</p>
+                <div className={gameImage}>
+                    <GatsbyImage image={cover} alt={game.monsterHunter.cover.altText}/>
+                </div>
+                <div className={gameSpecs}>
+                    <h1>{game.monsterHunter.title}</h1>
+                    <p>{game.monsterHunter.initialReleaseDate}</p>
                 </div>
             </section>
         </Link>
