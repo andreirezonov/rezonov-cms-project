@@ -28,7 +28,7 @@ const GamesPage = ({ data: { allWpGame: { edges }}}) => {
                             <div className={gamesSpecs}>
                                 <h1>{game.title}</h1>
                                 <p>{game.initialReleaseDate}</p>
-                                <h2>{game.generation} Generation</h2>
+                                <h2>{game.generation}</h2>
                             </div>
                         </Link>
                     )

@@ -214,15 +214,15 @@
 	background-color: #fdc76c;
 }
 .gamesSpecs > h1 {
-	font-size: 17px;
+	font-size: 16px;
 
-	margin-bottom: -8px;
+	margin-bottom: -9px;
     padding-top: 5px;
 }
 .gamesSpecs > p {
 	font-size: 14px;
 
-    padding-bottom: 25px;
+    padding-bottom: 27px;
 }
 .gamesSpecs > h2 {
 	color: #fdc76c;
@@ -274,4 +274,10 @@
 	color: white;
 	font-size: 15px;
 	font-weight: normal;
+}
+.gamePageGeneration {
+	color: #fdc76c;
+	font-size: 30px;
+	font-weight: thin;
+	font-style: italic;
 }

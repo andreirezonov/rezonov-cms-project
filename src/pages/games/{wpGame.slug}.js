@@ -9,6 +9,7 @@ import {
     gamePageSection,
     gamePageCover,
     gamePageSpecs,
+    gamePageGeneration,
 } from "../../page.module.css"
 
 const GamePage = ({ data: { wpGame: { monsterHunter : game, platforms: { nodes : platforms }}}}) => {
@@ -20,6 +21,7 @@ const GamePage = ({ data: { wpGame: { monsterHunter : game, platforms: { nodes :
                 <GatsbyImage class={gamePageCover} image={image}/>
 
                 <h1>{game.title}</h1>
+                <div className={gamePageGeneration}>{game.generation}</div>
                 <p dangerouslySetInnerHTML={{ __html: game.description }}/>
 
                 <div className={gamePageSpecs}>
@@ -60,9 +62,6 @@ const GamePage = ({ data: { wpGame: { monsterHunter : game, platforms: { nodes :
                     <p>Locations
                         <li>Hunting Locations: {game.huntingLocations}</li>
                         <li>Town Locations: {game.townLocations}</li>
-                    </p>
-                    <p>Generation
-                        <li>{game.generation}</li>
                     </p>
                 </div>
             </section>
