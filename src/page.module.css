@@ -198,11 +198,21 @@
 	width: 355px;
 
 	background-color: #1a1a1a;
+
+	opacity: 0.86;
+
+	transition: opacity .2s ease-in-out;
+	-webkit-transition: opacity .2s ease-in-out;
 }
 .gamesContainer:hover {
 	outline-width: 7px;
 
     transition: outline-width 0.1s ease-in-out;
+
+	opacity: 1;
+
+	transition: opacity .2s ease-in-out;
+	-webkit-transition: opacity .2s ease-in-out;
 }
 .gamesCover {
 	max-height: 300px;
@@ -216,6 +226,8 @@
     line-height: 15px;
 
 	background-color: #fdc76c;
+
+	opacity: 1;
 }
 .gamesSpecs > h1 {
 	font-size: 16px;
