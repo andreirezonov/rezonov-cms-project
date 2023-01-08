@@ -168,7 +168,7 @@
 	-webkit-transition: opacity .2s ease-in-out;
 }
 
-/* -- GAMES PAGE -- */
+/* -- GAMES(INDEX) PAGE -- */
 
 .gamesSection {
 	user-select: none;
@@ -207,6 +207,8 @@
 .gamesCover {
 	max-height: 300px;
 	max-width: 355px;
+
+	margin-bottom: -13px;
 }
 .gamesSpecs {
 	color: #212121;
@@ -239,6 +241,7 @@
 }
 
 /* -- GAME PAGE -- */
+
 .gamePageSection {
 	margin: 50px 100px 100px 100px;
 }
