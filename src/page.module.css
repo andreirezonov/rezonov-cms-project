@@ -57,7 +57,7 @@
 .featuredSection {
 	margin: 300px 100px 0px 100px;
 
-	margin-top: 100px;
+	margin-top: 150px;
 }
 .featuredSection > h1 {
 	user-select: none;
@@ -70,6 +70,8 @@
 .featuredTitle {
 	display: flex;
 	justify-content: space-between;
+
+	margin: 0px 100px 0px 100px;
 }
 
 /* -- FORM -- */
