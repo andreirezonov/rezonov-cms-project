@@ -22,7 +22,7 @@
 .gameCover:hover {
 	outline-width: 12px;
 
-    transition: outline-width 0.1s ease-in-out;
+    transition: outline-width 0.1s ease-in-out !important;
 
     opacity: 1;
 

@@ -207,7 +207,7 @@
 .gamesContainer:hover {
 	outline-width: 7px;
 
-    transition: outline-width 0.1s ease-in-out;
+    transition: outline-width 0.1s ease-in-out !important;
 
 	opacity: 1;
 
