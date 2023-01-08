@@ -15,7 +15,7 @@
     outline-offset: 8px;
 }
 .gameCover:hover {
-	outline-width: 5px;
+	outline-width: 12px;
 
     transition: outline-width 0.1s ease-in-out;
 }
