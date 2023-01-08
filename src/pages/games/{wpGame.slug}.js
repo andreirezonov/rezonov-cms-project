@@ -91,7 +91,7 @@ query ($slug: String) {
             cover {
                 localFile {
                     childImageSharp {
-                        gatsbyImageData(height: 400)
+                        gatsbyImageData(height: 500)
                     }
                 }
             }

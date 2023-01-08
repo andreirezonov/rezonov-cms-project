@@ -97,7 +97,7 @@
 	margin: 0px 10px 0px 10px;
 	padding: 20px;
 
-	outline-style: solid;
+	outline-style: dashed;
 	outline-width: 5px;
 	outline-color: #fdc76c;
 	outline-offset: 5px;
@@ -183,6 +183,13 @@
 	margin: 50px 50px 100px 50px;
 }
 .gamesContainer {
+	text-decoration: none;
+
+	outline-style: solid;
+	outline-width: 0px;
+	outline-offset: 5px;
+	outline-color: #fdc76c;
+
 	padding: 40px;
 
 	height: 355px;
@@ -190,23 +197,14 @@
 
 	background-color: #1a1a1a;
 }
-.gamesLink, .gamesLink:link, .gamesLink:visited {
-	text-decoration: none;
-}
-.gamesCover {
-	margin-bottom: -14px;
-	outline-style: solid;
-	outline-width: 0px;
-	outline-offset: 5px;
-	outline-color: #fdc76c;
-
-	max-height: 300px;
-	max-width: 355px;
-}
-.gamesCover:hover {
+.gamesContainer:hover {
 	outline-width: 3px;
 
     transition: outline-width 0.1s ease-in-out;
+}
+.gamesCover {
+	max-height: 300px;
+	max-width: 355px;
 }
 .gamesSpecs {
 	color: #212121;
@@ -235,7 +233,7 @@
 	margin-top: -35px;
 	padding: 5px;
 
-	background-color: #2b2b2b;
+	background-color:#1a1a1a;
 }
 
 /* -- GAME PAGE -- */
@@ -248,7 +246,7 @@
 	font-size: 60px;
 	font-weight: bold;
 
-	margin: 10px 0px 0px -2px;
+	margin: -20px 0px 0px -2px;
 }
 .gamePageCover {
 	user-select: none;
@@ -256,7 +254,7 @@
 	border-width: 5px;
 	border-spacing: 20px;
 
-	margin-top: -390px;
+	margin-top: -525px;
 }
 .gamePageBackground {
 	height: fit-content;
