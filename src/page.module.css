@@ -255,13 +255,16 @@
 	border: #fdc76c;
 	border-width: 5px;
 	border-spacing: 20px;
+
+	margin-top: -390px;
 }
 .gamePageBackground {
-	position: absolute;
 	height: fit-content;
 	width: 100%;
 	opacity: 0.5;
 	filter: blur(20px);
+
+	margin-top: 40px;
 }
 .gamePageSpecs > p {
 	color: #fdc76c;
